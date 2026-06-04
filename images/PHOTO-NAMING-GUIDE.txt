@@ -1,0 +1,60 @@
+THE SMOKY NEST — PHOTO NAMING GUIDE
+====================================
+
+HOW TO USE:
+1. Put ALL your location photos in THIS folder (the "images" folder).
+2. Name each photo using the filename listed below for that place.
+3. Use .jpg or .png — either is fine. Just keep the name (left side) exactly.
+4. Don't worry about photo size — Claude will optimize them for fast loading.
+5. When they're all in, tell Claude "photos are in" and they'll be added to the site.
+
+You don't have to provide every one. Any you skip will keep its current placeholder
+(or you can ask Claude to remove the photo from that card).
+
+ATTRACTIONS
+-----------
+Dollywood ......................... dollywood.jpg
+The Island in Pigeon Forge ........ the-island.jpg
+The Track Family Fun Park ......... the-track.jpg
+Crave Golf Club ................... crave-golf.jpg
+Smoky Mountain Alpine Coaster ..... alpine-coaster.jpg
+Rocky Top Mountain Coaster ........ rocky-top-coaster.jpg
+Pigeon Forge Racing Coaster ....... racing-coaster.jpg
+Rowdy Bear's Mountain ............. rowdy-bear.jpg
+Goat Coaster (Goats on the Roof) .. goats-on-the-roof.jpg
+Dolly Parton's Stampede ........... stampede.jpg
+Hatfield & McCoy Dinner Feud ...... hatfield-mccoy.jpg
+Pirates Voyage Dinner & Show ...... pirates-voyage.jpg
+Titanic Museum Attraction ......... titanic.jpg
+WonderWorks ....................... wonderworks.jpg
+
+DINING
+------
+The Fat Bear Family Tavern ........ fat-bear.jpg
+Cinnamon Bread Factory ............ cinnamon-bread.jpg
+The Old Mill Restaurant ........... old-mill.jpg
+Mama's Farmhouse .................. mamas-farmhouse.jpg
+Sunliner Diner .................... sunliner-diner.jpg
+Bennett's Pit Bar-B-Que ........... bennetts-bbq.jpg
+Local Goat ........................ local-goat.jpg
+Puckett's ......................... pucketts.jpg
+
+OUTDOORS & NEARBY
+-----------------
+Cades Cove Loop ................... cades-cove.jpg
+Smoky Mtns Parking Tag (park) ..... smokies-park.jpg
+Anakeesta ......................... anakeesta.jpg
+Gatlinburg SkyPark & SkyBridge .... skybridge.jpg
+Ober Mountain ..................... ober-mountain.jpg
+Tanger Outlets Sevierville ........ tanger-outlets.jpg
+NASCAR SpeedPark .................. nascar-speedpark.jpg
+
+ESSENTIALS (optional — these cards currently have no photo)
+----------------------------------------------------------
+Food City ......................... food-city.jpg
+Kroger ............................ kroger.jpg
+Walmart Supercenter ............... walmart.jpg
+Walgreens ......................... walgreens.jpg
+CVS Pharmacy ...................... cvs.jpg
+AFC Urgent Care ................... afc-urgent-care.jpg
+LeConte Medical Center ............ leconte.jpg
