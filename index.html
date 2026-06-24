@@ -189,7 +189,27 @@
     .lb-close,.lb-nav{width:44px;height:44px;font-size:1.4rem}
     .lb-nav.prev{left:6px}.lb-nav.next{right:6px}
   }
-</style>
+
+    /* Reviews / FAQ / guide cards (added for SEO) */
+    .tn-grid{display:grid;gap:18px}
+    @media(min-width:700px){.tn-grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+    .tn-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    .tn-card p{margin:0 0 12px;color:var(--ink)}
+    .tn-stars{color:var(--gold);letter-spacing:3px;margin-bottom:8px}
+    .tn-author{font-weight:700;color:var(--green)}
+    .tn-faq{max-width:820px}
+    .tn-faq details{background:var(--card);border-radius:12px;box-shadow:var(--shadow);margin:0 0 12px;padding:2px 22px}
+    .tn-faq summary{cursor:pointer;font-weight:700;color:var(--green);padding:16px 0;list-style:none}
+    .tn-faq summary::-webkit-details-marker{display:none}
+    .tn-faq summary::after{content:"+";float:right;color:var(--gold);font-size:1.4rem;line-height:1}
+    .tn-faq details[open] summary::after{content:"–"}
+    .tn-faq details p{margin:0 0 18px;color:var(--ink)}
+    .tn-guides{display:grid;gap:18px}
+    @media(min-width:700px){.tn-guides{grid-template-columns:1fr 1fr}}
+    .tn-guide-card{display:block;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;text-decoration:none;color:var(--ink)}
+    .tn-guide-card h3{color:var(--green);margin:0 0 8px}
+    .tn-guide-card span{color:var(--gold);font-weight:700}
+  </style>
 
   <!-- SEO: canonical, social, structured data (added for search visibility) -->
   <link rel="canonical" href="https://thesmokynest.com/">
@@ -931,7 +951,156 @@
   </div>
 </section>
 
-</main>
+
+    <section id="reviews">
+      <div class="wrap">
+        <h2>What Guests Say</h2>
+        <p style="max-width:680px">Our guests consistently rate The Smoky Nest five stars. A few words from recent stays:</p>
+        <div class="tn-grid cols-3">
+          <div class="tn-card"><div class="tn-stars">★★★★★</div><p>Everyone in our group really enjoyed this place. It was clean, updated, fully stocked, and comfortable. The location is ideal for all the attractions in Pigeon Forge and Gatlinburg, and the neighborhood is quiet.</p><div class="tn-author">Lisa</div></div>
+          <div class="tn-card"><div class="tn-stars">★★★★★</div><p>Great home — clean, organized, and very close to town for food and activities, but far enough away to be cozy and private. Highly recommend this host.</p><div class="tn-author">Christine</div></div>
+          <div class="tn-card"><div class="tn-stars">★★★★★</div><p>Perfect for our family of six. Clean, safe, and a great location for the Smoky Mountains and anything in Pigeon Forge or Gatlinburg. Would not hesitate to book again.</p><div class="tn-author">Aaron</div></div>
+        </div>
+      </div>
+    </section>
+    <section id="faq" class="alt">
+      <div class="wrap">
+        <h2>Frequently Asked Questions</h2>
+        <div class="tn-faq">
+        <details><summary>Where is The Smoky Nest located?</summary><p>We're in Pigeon Forge, Tennessee — about 3 minutes from the Parkway attractions, roughly 15 minutes from Dollywood, and about a 30-minute drive to the Great Smoky Mountains National Park. The cabin sits on flat, easy-access roads with no steep winding climbs.</p></details>
+        <details><summary>What are the check-in and check-out times?</summary><p>Check-in is after 4:00 PM and check-out is before 11:00 AM. Check-in is self-service with a keypad, and recent guests have rated the arrival experience five stars.</p></details>
+        <details><summary>How many guests can stay, and what are the sleeping arrangements?</summary><p>The cabin comfortably sleeps up to 5 guests across two king bedrooms, each with its own attached full bathroom (2 bedrooms, 2 baths).</p></details>
+        <details><summary>Is there parking?</summary><p>Yes — free driveway parking for up to two vehicles, with flat, easy access right up to the cabin.</p></details>
+        <details><summary>Are pets allowed?</summary><p>The Smoky Nest is a pet-free home to keep it fresh and comfortable for guests with allergies.</p></details>
+        <details><summary>What's provided in the cabin?</summary><p>A fully stocked kitchen (Keurig, air fryer, Instant Pot, pots and pans), a full-size washer and dryer in the unit, high-speed WiFi, Roku TVs, an indoor fireplace, board games, and starter supplies. A pack-n-play and high chair are available for little ones.</p></details>
+        <details><summary>Can I book directly?</summary><p>Yes. Booking direct through this website is the best way to reach us and helps you avoid the extra service fees added by third-party platforms.</p></details>
+        </div>
+      </div>
+    </section>
+    <section id="guides">
+      <div class="wrap">
+        <h2>Explore Pigeon Forge</h2>
+        <p style="max-width:680px">Planning your trip? Start with our local guides:</p>
+        <div class="tn-guides">
+          <a class="tn-guide-card" href="/things-to-do-pigeon-forge.html"><h3>Things to Do Near Pigeon Forge</h3><p>Dollywood, alpine coasters, dinner shows, and the best family attractions — with distances from the cabin.</p><span>Read the guide →</span></a>
+          <a class="tn-guide-card" href="/restaurants-pigeon-forge.html"><h3>Best Restaurants in Pigeon Forge</h3><p>Pancakes, BBQ, and Southern comfort food — favorite local spots minutes from The Smoky Nest.</p><span>Read the guide →</span></a>
+        </div>
+      </div>
+    </section>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is The Smoky Nest located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're in Pigeon Forge, Tennessee — about 3 minutes from the Parkway attractions, roughly 15 minutes from Dollywood, and about a 30-minute drive to the Great Smoky Mountains National Park. The cabin sits on flat, easy-access roads with no steep winding climbs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the check-in and check-out times?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check-in is after 4:00 PM and check-out is before 11:00 AM. Check-in is self-service with a keypad, and recent guests have rated the arrival experience five stars."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many guests can stay, and what are the sleeping arrangements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The cabin comfortably sleeps up to 5 guests across two king bedrooms, each with its own attached full bathroom (2 bedrooms, 2 baths)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there parking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — free driveway parking for up to two vehicles, with flat, easy access right up to the cabin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are pets allowed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Smoky Nest is a pet-free home to keep it fresh and comfortable for guests with allergies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's provided in the cabin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A fully stocked kitchen (Keurig, air fryer, Instant Pot, pots and pans), a full-size washer and dryer in the unit, high-speed WiFi, Roku TVs, an indoor fireplace, board games, and starter supplies. A pack-n-play and high chair are available for little ones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I book directly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Booking direct through this website is the best way to reach us and helps you avoid the extra service fees added by third-party platforms."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "LodgingBusiness",
+      "@id": "https://thesmokynest.com/#lodging",
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Lisa"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Everyone in our group really enjoyed this place. It was clean, updated, fully stocked, and comfortable. The location is ideal for all the attractions in Pigeon Forge and Gatlinburg, and the neighborhood is quiet."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Christine"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Great home — clean, organized, and very close to town for food and activities, but far enough away to be cozy and private. Highly recommend this host."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Aaron"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Perfect for our family of six. Clean, safe, and a great location for the Smoky Mountains and anything in Pigeon Forge or Gatlinburg. Would not hesitate to book again."
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </main>
 
 <footer>
   <a href="#top" class="brand" style="font-size:1.3rem;color:#fff">The Smoky <span style="color:var(--gold-lt)">Nest</span></a>
