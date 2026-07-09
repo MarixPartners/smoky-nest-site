@@ -236,46 +236,111 @@
 
   <!-- Structured data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "@id": "https://thesmokynest.com/#lodging",
-    "name": "The Smoky Nest",
-    "description": "A charming 2-bedroom, 2-bath cabin rental in Pigeon Forge, Tennessee, with two king suites, minutes from Parkway attractions, Dollywood, and the Great Smoky Mountains.",
-    "url": "https://thesmokynest.com/",
-    "image": "https://thesmokynest.com/images/hero.jpg",
-    "priceRange": "$",
-    "numberOfRooms": 2,
-    "petsAllowed": false,
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Pigeon Forge",
-      "addressRegion": "TN",
-      "postalCode": "37863",
-      "addressCountry": "US"
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "@id": "https://thesmokynest.com/#lodging",
+  "name": "The Smoky Nest",
+  "description": "A charming 2-bedroom, 2-bath cabin rental in Pigeon Forge, Tennessee, with two king suites, minutes from Parkway attractions, Dollywood, and the Great Smoky Mountains.",
+  "url": "https://thesmokynest.com/",
+  "image": "https://thesmokynest.com/images/hero.jpg",
+  "priceRange": "$",
+  "numberOfRooms": 2,
+  "petsAllowed": false,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pigeon Forge",
+    "addressRegion": "TN",
+    "postalCode": "37863",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 35.7884,
+    "longitude": -83.5543
+  },
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Free WiFi",
+      "value": true
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 35.7884,
-      "longitude": -83.5543
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Free parking",
+      "value": true
     },
-    "amenityFeature": [
-      {"@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true},
-      {"@type": "LocationFeatureSpecification", "name": "Free parking", "value": true},
-      {"@type": "LocationFeatureSpecification", "name": "Kitchen", "value": true},
-      {"@type": "LocationFeatureSpecification", "name": "Washer and dryer", "value": true},
-      {"@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true},
-      {"@type": "LocationFeatureSpecification", "name": "Indoor fireplace", "value": true}
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.95",
-      "reviewCount": "21",
-      "bestRating": "5",
-      "worstRating": "1"
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Kitchen",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Washer and dryer",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Air conditioning",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Indoor fireplace",
+      "value": true
     }
-  }
-  </script>
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.95",
+    "reviewCount": "21",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Lisa"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Everyone in our group really enjoyed this place. It was clean, updated, fully stocked, and comfortable. The location is ideal for all the attractions in Pigeon Forge and Gatlinburg, and the neighborhood is quiet."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Christine"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Great home — clean, organized, and very close to town for food and activities, but far enough away to be cozy and private. Highly recommend this host."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Aaron"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Perfect for our family of six. Clean, safe, and a great location for the Smoky Mountains and anything in Pigeon Forge or Gatlinburg. Would not hesitate to book again."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -990,116 +1055,67 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Where is The Smoky Nest located?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We're in Pigeon Forge, Tennessee — about 3 minutes from the Parkway attractions, roughly 15 minutes from Dollywood, and about a 30-minute drive to the Great Smoky Mountains National Park. The cabin sits on flat, easy-access roads with no steep winding climbs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the check-in and check-out times?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Check-in is after 4:00 PM and check-out is before 11:00 AM. Check-in is self-service with a keypad, and recent guests have rated the arrival experience five stars."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many guests can stay, and what are the sleeping arrangements?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The cabin comfortably sleeps up to 5 guests across two king bedrooms, each with its own attached full bathroom (2 bedrooms, 2 baths)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is there parking?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — free driveway parking for up to two vehicles, with easy access right up to the cabin."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are pets allowed?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Smoky Nest is a pet-free home to keep it fresh and comfortable for guests with allergies."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What's provided in the cabin?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A fully stocked kitchen (Keurig, air fryer, Instant Pot, pots and pans), a full-size washer and dryer in the unit, high-speed WiFi, Roku TVs, an indoor fireplace, board games, and starter supplies. A pack-n-play and high chair are available for little ones."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I book directly?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Booking direct through this website is the best way to reach us and helps you avoid the extra service fees added by third-party platforms."
-          }
-        }
-      ]
+      "@type": "Question",
+      "name": "Where is The Smoky Nest located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We're in Pigeon Forge, Tennessee — about 3 minutes from the Parkway attractions, roughly 15 minutes from Dollywood, and about a 30-minute drive to the Great Smoky Mountains National Park. The cabin sits on flat, easy-access roads with no steep winding climbs."
+      }
     },
     {
-      "@type": "LodgingBusiness",
-      "@id": "https://thesmokynest.com/#lodging",
-      "review": [
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Lisa"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "reviewBody": "Everyone in our group really enjoyed this place. It was clean, updated, fully stocked, and comfortable. The location is ideal for all the attractions in Pigeon Forge and Gatlinburg, and the neighborhood is quiet."
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Christine"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "reviewBody": "Great home — clean, organized, and very close to town for food and activities, but far enough away to be cozy and private. Highly recommend this host."
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Aaron"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "reviewBody": "Perfect for our family of six. Clean, safe, and a great location for the Smoky Mountains and anything in Pigeon Forge or Gatlinburg. Would not hesitate to book again."
-        }
-      ]
+      "@type": "Question",
+      "name": "What are the check-in and check-out times?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check-in is after 4:00 PM and check-out is before 11:00 AM. Check-in is self-service with a keypad, and recent guests have rated the arrival experience five stars."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many guests can stay, and what are the sleeping arrangements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cabin comfortably sleeps up to 5 guests across two king bedrooms, each with its own attached full bathroom (2 bedrooms, 2 baths)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there parking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — free driveway parking for up to two vehicles, with easy access right up to the cabin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are pets allowed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Smoky Nest is a pet-free home to keep it fresh and comfortable for guests with allergies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's provided in the cabin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A fully stocked kitchen (Keurig, air fryer, Instant Pot, pots and pans), a full-size washer and dryer in the unit, high-speed WiFi, Roku TVs, an indoor fireplace, board games, and starter supplies. A pack-n-play and high chair are available for little ones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I book directly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Booking direct through this website is the best way to reach us and helps you avoid the extra service fees added by third-party platforms."
+      }
     }
   ]
 }
-    </script>
+</script>
   </main>
 
 <footer>
