@@ -111,6 +111,13 @@
   form.inquiry .row>div{flex:1}
   form.inquiry button{margin-top:18px;width:100%}
   .note{font-size:.78rem;color:var(--muted);margin-top:10px;text-align:center}
+  /* OwnerRez inquiry widget panel — mirrors the old form.inquiry card */
+  .bookwidget{background:#fff;color:var(--ink);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+  .bookwidget h3{color:var(--green-dk);font-family:Georgia,serif;margin:0 0 6px;font-size:1.4rem}
+  .bookwidget .bookwidget-sub{color:var(--muted);font-size:.92rem;margin:0 0 18px;line-height:1.5}
+  .bookwidget .ownerrez-widget{width:100%}
+  .bookwidget .note{margin-top:14px}
+  @media(max-width:600px){.bookwidget{padding:20px 14px}}
   .formstatus{font-size:.92rem;margin-top:14px;text-align:center;font-weight:600;line-height:1.4}
 
   /* GUIDE TABS */
@@ -279,7 +286,6 @@
       <h3>Check Your Dates</h3>
       <p class="availcal-sub">Green dates are already booked. Use the arrows to look further ahead.</p>
       <div class="ownerrez-widget" data-propertyId="f87d11eb68e84d6a9baf7f0e645abb42" data-widget-type="Multiple Month Calendar" data-widgetId="770d3259916e433bbbd556e38f4fd631"></div>
-      <script src="https://app.ownerrez.com/widget.js"></script>
     </div>
 
     <div class="book-grid">
@@ -290,25 +296,19 @@
         </div>
         <p style="color:#cfe0d3;font-size:.9rem;margin-top:18px">Check-in after 4:00 PM · Checkout by 11:00 AM · Sleeps up to 5.<br>Prefer to talk first? Use the form and we'll get right back to you with availability and our best direct rate.</p>
       </div>
-      <form class="inquiry" onsubmit="return sendInquiry(event)" aria-label="Request to book The Smoky Nest">
+      <!-- OwnerRez Booking/Inquiry widget.
+           Currently set to "Inquiry Only" in OwnerRez.
+           After the Airbnb cutover, flip it to "Book Now/Inquiry" in
+           OwnerRez > Settings > Widgets — this embed code does NOT change. -->
+      <div class="bookwidget">
         <h3>Request to Book</h3>
-        <div class="row">
-          <div><label for="f_name">Name</label><input id="f_name" name="name" autocomplete="name" required></div>
-          <div><label for="f_guests">Guests</label><input id="f_guests" name="guests" type="number" min="1" value="2"></div>
-        </div>
-        <div class="row">
-          <div><label for="f_email">Email</label><input id="f_email" name="email" type="email" autocomplete="email" required></div>
-          <div><label for="f_phone">Phone</label><input id="f_phone" name="phone" type="tel" autocomplete="tel" required></div>
-        </div>
-        <div class="row">
-          <div><label for="f_in">Check-in</label><input id="f_in" name="checkin" type="date"></div>
-          <div><label for="f_out">Check-out</label><input id="f_out" name="checkout" type="date"></div>
-        </div>
-        <label for="f_msg">Message</label><textarea id="f_msg" name="message" rows="3" placeholder="Tell us a little about your trip..."></textarea>
-        <button type="submit" class="btn">Send Request</button>
-        <div class="note">We typically reply within a few hours. No payment required to inquire.</div>
-        <div class="formstatus" id="formStatus" role="status" aria-live="polite"></div>
-      </form>
+        <p class="bookwidget-sub">Send your dates and we'll come back with a quote, usually within a few hours. No payment to enquire.</p>
+        <div class="ownerrez-widget"
+             data-propertyId="f87d11eb68e84d6a9baf7f0e645abb42"
+             data-widget-type="Booking/Inquiry"
+             data-widgetId="43f5eccf122849b59fb277c549af6bb7"></div>
+        <div class="note">Goes straight into our booking system, so nothing gets lost in an inbox.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -929,6 +929,9 @@
     });
   });
 
+  // UNUSED as of the OwnerRez swap — the inquiry form was replaced by the
+  // OwnerRez Booking/Inquiry widget. Kept only so the change is easy to revert;
+  // safe to delete this function and WEBHOOK_URL once you are happy with the widget.
   // Inquiry form -> sends to private Make.com webhook (which emails + texts the host)
   var WEBHOOK_URL="https://hook.us2.make.com/lcbi7ac76omate5p8ruedp4691cgbrnj";
   function sendInquiry(e){
@@ -1013,5 +1016,7 @@
     });
   })();
 </script>
+<!-- OwnerRez widget loader — one per page, after both widget divs -->
+<script src="https://app.ownerrez.com/widget.js"></script>
 </body>
 </html>
