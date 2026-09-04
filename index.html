@@ -1076,5 +1076,46 @@
 </script>
 <!-- OwnerRez widget loader — one per page, after both widget divs -->
 <script src="https://app.ownerrez.com/widget.js"></script>
+
+<!-- Structured data: LodgingBusiness. Every property below maps to content visible on this page. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "@id": "https://thesmokynest.com/#lodging",
+  "name": "The Smoky Nest",
+  "url": "https://thesmokynest.com/",
+  "description": "A bright, fully stocked cabin rental in Pigeon Forge, Tennessee with two king suites, each with its own private ensuite bath, about three minutes from the Parkway.",
+  "image": "https://thesmokynest.com/images/hero.jpg",
+  "sameAs": "https://www.airbnb.com/rooms/1553958627700606401",
+  "numberOfRooms": 2,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pigeon Forge",
+    "addressRegion": "TN",
+    "postalCode": "37863",
+    "addressCountry": "US"
+  },
+  "containsPlace": {
+    "@type": "Accommodation",
+    "occupancy": {
+      "@type": "QuantitativeValue",
+      "maxValue": 5,
+      "unitCode": "C62"
+    }
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Indoor fireplace", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Full kitchen", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Washer and dryer", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Roku TVs", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Central air conditioning", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Driveway parking for two vehicles", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Pack-n-play and high chair", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Board games", "value": true }
+  ]
+}
+</script>
 </body>
 </html>
