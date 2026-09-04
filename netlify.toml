@@ -1,0 +1,19 @@
+# Netlify configuration for The Smoky Nest
+#
+# Purpose: keep NON-PRODUCTION deploys (branch deploys and deploy previews) out
+# of search engines, without changing anything about the production site.
+#
+# Note: headers declared in netlify.toml with [[headers]] are GLOBAL and cannot
+# be scoped to a deploy context. The approach Netlify documents for per-context
+# headers is to copy a context-specific `_headers` file into the publish
+# directory as part of that context's build command.
+#
+# Production (`main`) intentionally defines NO context block and NO build
+# command here, so no `_headers` file is ever produced for production and its
+# response headers are unchanged.
+
+[context.branch-deploy]
+  command = "cp ./deploy-headers/_noindexHeaders ./_headers"
+
+[context.deploy-preview]
+  command = "cp ./deploy-headers/_noindexHeaders ./_headers"
