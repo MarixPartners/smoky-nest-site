@@ -1,19 +1,39 @@
 # The Smoky Nest
 
-Website + local guide for **The Smoky Nest**, a short-term rental cottage in Pigeon Forge, TN.
+Website and local guide for **The Smoky Nest**, a short-term rental cottage in
+Pigeon Forge, TN. Live at [thesmokynest.com](https://thesmokynest.com/).
 
-The site is a single self-contained `index.html` file — a property showcase, a direct "Request to Book" inquiry form, and a comprehensive local guide to Pigeon Forge / Gatlinburg / Sevierville attractions, dining, mountain coasters, and the Great Smoky Mountains, with current prices, directions, and links.
+A static multi-page site with no build step, no framework, and no dependencies.
+Each page carries its own inline CSS and JavaScript.
 
-## Files
-- `index.html` — the entire website (open in any browser)
-- `Hero Background Smoky Nest.png` — hero banner image
+## Pages
+- `index.html` — property showcase, live availability, booking, contact, and the local guide
+- `things-to-do-pigeon-forge.html` — attractions guide
+- `restaurants-pigeon-forge.html` — dining guide
+- `thanks.html` — contact form confirmation page (noindex)
+- `check-in-card.html` — printable card for guests (not linked from the site)
 
-## Hosting with GitHub Pages
-1. Push this folder to a GitHub repository.
-2. In the repo: **Settings → Pages**.
-3. Under **Build and deployment**, set **Source: Deploy from a branch**, **Branch: `main` / `root`**, then **Save**.
-4. After a minute, your site is live at `https://<your-username>.github.io/<repo-name>/`.
-5. Point your check-in QR code at that URL.
+## Other files
+- `images/` — local photography for the guide sections
+- `sitemap.xml`, `robots.txt` — search engine directives
+- `netlify.toml`, `deploy-headers/` — deploy configuration (see below)
+- `CNAME`, `favicon.ico`, `apple-touch-icon.png`, `googlec425fee7cfaa22df.html`
+
+## Third-party embeds
+- Availability and booking requests are handled by embedded OwnerRez widgets,
+  loaded from `app.ownerrez.com/widget.js`.
+- The contact form uses Netlify Forms. No JavaScript is involved; submissions
+  appear in the Netlify dashboard under Forms.
+
+## Deployment
+Hosted on Netlify, deployed from this repository. Pushes to `main` publish to
+production automatically.
+
+Branch deploys are enabled for `smoky-nest-v2`. `netlify.toml` gives non-production
+contexts a build command that copies `deploy-headers/_noindexHeaders` to `_headers`,
+so branch deploys and deploy previews return `X-Robots-Tag: noindex, nofollow`.
+Production defines no such context and is unaffected.
 
 ## Updating
-Edit `index.html` (listing links, prices, new favorites) and commit/push. GitHub Pages redeploys automatically.
+Edit the relevant HTML file and push. Update `sitemap.xml` `lastmod` when page
+content changes.
