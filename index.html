@@ -132,6 +132,7 @@
   form.inquiry .row{display:flex;gap:12px}
   form.inquiry .row>div{flex:1}
   form.inquiry button{margin-top:18px;width:100%}
+  .contactwrap{max-width:620px;margin:0 auto}
   .note{font-size:.78rem;color:var(--muted);margin-top:10px;text-align:center}
   /* OwnerRez inquiry widget panel — mirrors the old form.inquiry card */
   .bookwidget{background:#fff;color:var(--ink);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
@@ -244,7 +245,7 @@
       <a href="#stay" onclick="closeNav()">The Cabin</a>
       <a href="#book" onclick="closeNav()">Book</a>
       <a href="#guide" onclick="closeNav()">Local Guide</a>
-      <a href="#book" onclick="closeNav()">Contact</a>
+      <a href="#contact" onclick="closeNav()">Contact</a>
     </nav>
   </div>
 </header>
@@ -278,7 +279,7 @@
       </div>
       <div>
         <p class="superhost">Airbnb Superhost · rated 4.95 on Airbnb · Guest Favorite, top 5% of homes on Airbnb</p>
-        <p><b>New owners, same beloved cottage</b> — with 150+ stays behind it. The Smoky Nest is a bright, fully stocked getaway with <b>two king suites, each with its own private ensuite bath</b>. Best of all, you're just 3 minutes to the Parkway and minutes from the area's top attractions. (Please note: there are 3 small steps up into the house.)</p>
+        <p><b>New owners, same beloved cottage</b> — with 150+ stays behind it. The Smoky Nest is a bright, fully stocked getaway with <b>two king suites, each with its own private ensuite bath</b>. Best of all, you're just 3 minutes to the Parkway and minutes from the area's top attractions.</p>
         <div class="stats">
           <div class="stat"><b>2</b><span>King Suites</span></div>
           <div class="stat"><b>2</b><span>Private Baths</span></div>
@@ -288,9 +289,10 @@
         <div class="amen">
           <span>🔥 Indoor Fireplace</span><span>📶 Fast Wi-Fi</span><span>🍳 Full Kitchen</span>
           <span>🧺 Washer &amp; Dryer</span><span>📺 Roku TVs</span><span>❄️ Central A/C</span>
-          <span>🚗 Driveway (2 cars)</span><span>🪜 3 Steps to Enter</span><span>👶 Pack-n-Play &amp; High Chair</span>
+          <span>🚗 Driveway (2 cars)</span><span>👶 Pack-n-Play &amp; High Chair</span>
           <span>🎲 Board Games</span>
         </div>
+        <p style="margin-top:14px"><b>Getting in:</b> three steps up into the house, and the interior is all one level.</p>
         <p style="margin-top:18px"><a href="#book" class="btn green">Check Availability</a></p>
       </div>
     </div>
@@ -939,11 +941,46 @@
   </div>
 </section>
 
+<!-- CONTACT -->
+<section id="contact" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Get in Touch</div>
+      <h2>Questions Before You Book?</h2>
+      <p>Ask us anything about the cabin or the area — we're happy to help, and there's no obligation to book.</p>
+    </div>
+
+    <div class="contactwrap">
+      <form class="inquiry" name="contact" method="POST" data-netlify="true"
+            netlify-honeypot="bot-field" action="/thanks.html">
+        <p style="display:none">
+          <label>Leave this field empty: <input name="bot-field"></label>
+        </p>
+
+        <label for="c-name">Your name</label>
+        <input id="c-name" type="text" name="name" autocomplete="name" required>
+
+        <label for="c-email">Email</label>
+        <input id="c-email" type="email" name="email" autocomplete="email" required>
+
+        <label for="c-msg">How can we help?</label>
+        <textarea id="c-msg" name="message" rows="5" required></textarea>
+
+        <button class="btn green" type="submit">Send message</button>
+      </form>
+
+      <p class="note">Prefer email? Write to us at
+        <a href="mailto:stay@thesmokynest.com">stay@thesmokynest.com</a>.
+        To check dates or request a booking, use the calendar above.</p>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <a href="#top" class="brand" style="font-size:1.3rem;color:#fff">The Smoky <span style="color:var(--gold-lt)">Nest</span></a>
-  <p>Pigeon Forge, Tennessee &nbsp;·&nbsp; <a href="#book">Book Direct</a></p>
+  <p>Pigeon Forge, Tennessee &nbsp;·&nbsp; <a href="#contact">Contact</a> &nbsp;·&nbsp; <a href="#book">Book Direct</a></p>
   <p class="disc">Prices and hours are approximate and change seasonally — please confirm on each attraction's official website before you go. The Smoky Nest is an independent rental and is not affiliated with the attractions listed in this guide. The Smoky Nest is an independent host and is not affiliated with, endorsed by, or sponsored by Airbnb, Inc. Airbnb, Superhost and Guest Favorite are trademarks of Airbnb, Inc.</p>
   <p class="credit" style="margin-top:14px;font-size:.8rem;opacity:.75">Site by <a href="https://butterfieldweb.com" target="_blank" rel="noopener">Butterfield Web Co.</a></p>
 </footer>
@@ -1087,6 +1124,7 @@
   "url": "https://thesmokynest.com/",
   "description": "A bright, fully stocked cabin rental in Pigeon Forge, Tennessee with two king suites, each with its own private ensuite bath, about three minutes from the Parkway.",
   "image": "https://thesmokynest.com/images/hero.jpg",
+  "email": "stay@thesmokynest.com",
   "sameAs": "https://www.airbnb.com/rooms/1553958627700606401",
   "numberOfRooms": 2,
   "address": {
