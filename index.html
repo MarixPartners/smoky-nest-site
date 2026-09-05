@@ -179,6 +179,9 @@
      action row instead of mid-card, so the address stays with the description. */
   #essentials .card p.desc{flex:0 0 auto}
   #essentials .card .links{margin-top:auto;padding-top:14px}
+  /* Anakeesta guide photo: keep AnaVista Tower whole at every card ratio, trim sky not subject. */
+  .card .thumb-anakeesta{object-position:center 56%}
+  .card .imgcredit{margin:-10px 0 10px;font-size:.68rem;line-height:1.4;color:var(--muted);letter-spacing:.02em}
   .favtag{display:inline-block;background:var(--gold-deep);color:#fff;font-size:.72rem;font-weight:700;
     letter-spacing:.6px;text-transform:uppercase;padding:3px 12px;border-radius:50px;margin-bottom:8px;align-self:flex-start}
 
@@ -750,7 +753,11 @@
       <div class="cards">
 
         <div class="card">
-          <img class="thumb" src="images/anakeesta.jpg" width="1200" height="874" alt="Anakeesta" loading="lazy">
+          <picture>
+            <source type="image/webp" srcset="images/guide/anakeesta-400.webp 400w, images/guide/anakeesta-768.webp 768w" sizes="(max-width:674px) 94vw, (max-width:1014px) 46vw, 340px">
+            <img class="thumb thumb-anakeesta" src="images/guide/anakeesta-400.jpg" srcset="images/guide/anakeesta-400.jpg 400w, images/guide/anakeesta-768.jpg 768w" sizes="(max-width:674px) 94vw, (max-width:1014px) 46vw, 340px" width="768" height="512" alt="AnaVista Tower at Anakeesta overlooking the Smoky Mountains" loading="lazy">
+          </picture>
+          <p class="imgcredit">Courtesy of Anakeesta</p>
           <h4>Anakeesta</h4>
           <div class="meta">Mountain Park · 10 mi</div>
           <p class="desc">Ride a chondola up to a mountaintop village: treetop skywalk, gem mining, ziplines, the Rail Runner coaster, dining, and sweeping Smoky views.</p>
