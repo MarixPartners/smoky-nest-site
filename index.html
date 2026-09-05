@@ -1043,47 +1043,6 @@
     });
   });
 
-  // UNUSED as of the OwnerRez swap — the inquiry form was replaced by the
-  // OwnerRez Booking/Inquiry widget. Kept only so the change is easy to revert;
-  // safe to delete this function and WEBHOOK_URL once you are happy with the widget.
-  // Inquiry form -> sends to private Make.com webhook (which emails + texts the host)
-  var WEBHOOK_URL="https://hook.us2.make.com/lcbi7ac76omate5p8ruedp4691cgbrnj";
-  function sendInquiry(e){
-    e.preventDefault();
-    var form=e.target;
-    var btn=form.querySelector('button[type="submit"]');
-    var status=document.getElementById('formStatus');
-    var ci=document.getElementById('f_in').value||'(not set)';
-    var co=document.getElementById('f_out').value||'(not set)';
-    var data=new URLSearchParams();
-    data.append('name', document.getElementById('f_name').value);
-    data.append('email', document.getElementById('f_email').value);
-    data.append('phone', document.getElementById('f_phone').value);
-    data.append('guests', document.getElementById('f_guests').value);
-    data.append('checkin', ci);
-    data.append('checkout', co);
-    data.append('message', document.getElementById('f_msg').value);
-    data.append('source', 'The Smoky Nest website');
-    var orig=btn.textContent;
-    btn.disabled=true; btn.textContent='Sending…';
-    status.style.color=''; status.textContent='';
-    fetch(WEBHOOK_URL, {
-      method:'POST', mode:'no-cors',
-      headers:{'Content-Type':'application/x-www-form-urlencoded'},
-      body:data.toString()
-    }).then(function(){
-      form.reset();
-      btn.style.display='none';
-      status.style.color='#2f5d3f';
-      status.textContent='✅ Thank you! Your request has been sent — we’ll get back to you shortly.';
-    }).catch(function(){
-      btn.disabled=false; btn.textContent=orig;
-      status.style.color='#b00020';
-      status.textContent='Sorry, something went wrong. Please try again, or message us on Airbnb.';
-    });
-    return false;
-  }
-
   // Photo lightbox (click/tap to enlarge property photos; arrows + Esc; keyboard accessible)
   (function(){
     var imgs=Array.prototype.slice.call(document.querySelectorAll('.gallery img'));
