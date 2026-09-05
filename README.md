@@ -14,7 +14,9 @@ Each page carries its own inline CSS and JavaScript.
 - `check-in-card.html` — printable card for guests (not linked from the site)
 
 ## Other files
-- `images/` — local photography for the guide sections
+- `images/` — property photography, plus documented third-party guide images.
+  See `images/guide/IMAGE-SOURCES.md` for the source and rights basis of every
+  guide image; do not add a guide image without adding its provenance record.
 - `sitemap.xml`, `robots.txt` — search engine directives
 - `netlify.toml`, `deploy-headers/` — deploy configuration (see below)
 - `CNAME`, `favicon.ico`, `apple-touch-icon.png`, `googlec425fee7cfaa22df.html`
