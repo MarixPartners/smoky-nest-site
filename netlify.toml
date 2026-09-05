@@ -17,3 +17,18 @@
 
 [context.deploy-preview]
   command = "cp ./deploy-headers/_noindexHeaders ./_headers"
+
+# Legacy path: /book-now was never a page on this site, but the path may exist
+# in older printed material or third-party listings. Send it permanently to the
+# homepage booking section. This is a server-side path redirect only; the #book
+# fragment is applied by the browser and never reaches the server.
+
+[[redirects]]
+  from = "/book-now"
+  to = "/#book"
+  status = 301
+
+[[redirects]]
+  from = "/book-now.html"
+  to = "/#book"
+  status = 301
