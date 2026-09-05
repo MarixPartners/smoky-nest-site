@@ -175,6 +175,10 @@
   .pricepill{display:inline-block;background:#eef4ec;color:var(--green);font-weight:700;font-size:.8rem;
     padding:3px 12px;border-radius:50px;margin-top:auto;align-self:flex-start;margin-bottom:10px}
   .card.fav{border:2px solid var(--gold)}
+  /* Essentials: text-first utility cards — no thumbnail. Slack collects above the
+     action row instead of mid-card, so the address stays with the description. */
+  #essentials .card p.desc{flex:0 0 auto}
+  #essentials .card .links{margin-top:auto;padding-top:14px}
   .favtag{display:inline-block;background:var(--gold-deep);color:#fff;font-size:.72rem;font-weight:700;
     letter-spacing:.6px;text-transform:uppercase;padding:3px 12px;border-radius:50px;margin-bottom:8px;align-self:flex-start}
 
@@ -824,7 +828,6 @@
       <div class="cards">
 
         <div class="card">
-          <img class="thumb" src="images/food-city.jpg" width="400" height="254" alt="Food City" loading="lazy">
           <h4>Food City</h4>
           <div class="meta">Grocery · ~2.5 mi</div>
           <p class="desc">Full-service grocery on Teaster Lane — produce, deli, bakery, and an in-store pharmacy. The closest big supermarket for stocking the cottage kitchen.</p>
@@ -837,7 +840,6 @@
         </div>
 
         <div class="card">
-          <img class="thumb" src="images/kroger.jpg" width="348" height="348" alt="Kroger" loading="lazy">
           <h4>Kroger</h4>
           <div class="meta">Grocery · ~1.5 mi</div>
           <p class="desc">Another well-stocked grocery just off the Parkway on Wears Valley Road, with a pharmacy and fuel center.</p>
@@ -850,7 +852,6 @@
         </div>
 
         <div class="card">
-          <img class="thumb" src="images/walmart.jpg" width="259" height="194" alt="Walmart Supercenter" loading="lazy">
           <h4>Walmart Supercenter</h4>
           <div class="meta">Supercenter · ~5 mi (Sevierville)</div>
           <p class="desc">One-stop Supercenter for groceries, household items, and a pharmacy — about 10–15 minutes north in Sevierville.</p>
@@ -868,7 +869,6 @@
       <div class="cards">
 
         <div class="card">
-          <img class="thumb" src="images/walgreens.jpg" width="495" height="300" alt="Walgreens" loading="lazy">
           <h4>Walgreens</h4>
           <div class="meta">Pharmacy · ~3 mi</div>
           <p class="desc">Pharmacy plus convenience essentials, right on the Parkway.</p>
@@ -881,7 +881,6 @@
         </div>
 
         <div class="card">
-          <img class="thumb" src="images/cvs.jpg" width="600" height="294" alt="CVS Pharmacy" loading="lazy">
           <h4>CVS Pharmacy</h4>
           <div class="meta">Pharmacy · ~2.5 mi</div>
           <p class="desc">Pharmacy, over-the-counter meds, and sundries near Teaster Lane.</p>
@@ -899,7 +898,6 @@
       <div class="cards">
 
         <div class="card">
-          <img class="thumb" src="images/afc-urgent-care.jpg" width="348" height="348" alt="AFC Urgent Care" loading="lazy">
           <h4>AFC Urgent Care</h4>
           <div class="meta">Urgent Care · Sevierville</div>
           <p class="desc">Walk-in clinic for minor illnesses and injuries — no appointment needed. Open Mon–Fri 8am–8pm, Sat–Sun 8am–5pm.</p>
@@ -912,7 +910,6 @@
         </div>
 
         <div class="card">
-          <img class="thumb" src="images/leconte.jpg" width="607" height="404" alt="LeConte Medical Center" loading="lazy">
           <h4>LeConte Medical Center</h4>
           <div class="meta">Hospital &amp; ER · Sevierville</div>
           <p class="desc">The area's full-service hospital with a 24/7 emergency room. <b>For any emergency, always call 911 first.</b></p>
