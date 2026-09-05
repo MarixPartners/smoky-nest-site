@@ -182,6 +182,9 @@
   #essentials .card .links{margin-top:auto;padding-top:14px}
   /* Anakeesta guide photo: keep AnaVista Tower whole at every card ratio, trim sky not subject. */
   .card .thumb-anakeesta{object-position:center 54%}
+  /* Titanic: the museum sits low in a sky-dominant frame; bias the crop down so the
+     hull, bow lettering and iceberg stay in the card at every width. */
+  .card .thumb-titanic{object-position:center 80%}
   .card .imgcredit{margin:-10px 0 10px;font-size:.68rem;line-height:1.4;color:var(--muted);letter-spacing:.02em}
   /* Things to Do: three attraction cards run text-first until authorized photography
      is sourced. The description stops absorbing grid slack, so any row-stretch gap
@@ -556,7 +559,11 @@
       <div class="cards">
 
         <div class="card">
-          <img class="thumb" src="images/titanic.jpg" width="1200" height="675" alt="Titanic Museum" loading="lazy">
+          <picture>
+            <source type="image/webp" srcset="images/guide/titanic-400.webp 400w, images/guide/titanic-768.webp 768w" sizes="(max-width:674px) 94vw, (max-width:1014px) 46vw, 340px">
+            <img class="thumb thumb-titanic" src="images/guide/titanic-400.jpg" srcset="images/guide/titanic-400.jpg 400w, images/guide/titanic-768.jpg 768w" sizes="(max-width:674px) 94vw, (max-width:1014px) 46vw, 340px" width="768" height="512" alt="The half-scale Titanic ship façade and iceberg at the Titanic Museum Attraction in Pigeon Forge" loading="lazy">
+          </picture>
+          <p class="imgcredit">Carol M. Highsmith / Library of Congress</p>
           <h4>Titanic Museum Attraction</h4>
           <div class="meta">Museum · 2.9 mi</div>
           <p class="desc">Walk the grand staircase aboard a half-scale Titanic, touch a real iceberg, and explore 400+ artifacts. Great rainy-day pick.</p>
