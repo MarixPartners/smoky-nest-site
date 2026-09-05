@@ -175,9 +175,10 @@
   .pricepill{display:inline-block;background:#eef4ec;color:var(--green);font-weight:700;font-size:.8rem;
     padding:3px 12px;border-radius:50px;margin-top:auto;align-self:flex-start;margin-bottom:10px}
   .card.fav{border:2px solid var(--gold)}
-  /* Essentials: text-first utility cards — no thumbnail. Slack collects above the
-     action row instead of mid-card, so the address stays with the description. */
-  #essentials .card p.desc{flex:0 0 auto}
+  /* Essentials and Dining: text-first cards — no thumbnail. The description stops
+     absorbing grid slack, so it collects above the action row instead of mid-card and
+     the address stays with the description. */
+  #essentials .card p.desc, #dining .card p.desc{flex:0 0 auto}
   #essentials .card .links{margin-top:auto;padding-top:14px}
   /* Anakeesta guide photo: keep AnaVista Tower whole at every card ratio, trim sky not subject. */
   .card .thumb-anakeesta{object-position:center 54%}
@@ -598,7 +599,6 @@
       <div class="cards">
 
         <div class="card fav">
-          <img class="thumb" src="images/fat-bear.jpg" width="245" height="206" alt="The Fat Bear Family Tavern" loading="lazy">
           <span class="favtag">★ Host Favorite</span>
           <h4>The Fat Bear Family Tavern</h4>
           <div class="meta">Family Tavern · ~2.5 mi</div>
@@ -613,7 +613,6 @@
         </div>
 
         <div class="card fav">
-          <img class="thumb" src="images/cinnamon-bread.jpg" width="245" height="206" alt="Cinnamon Bread Factory" loading="lazy">
           <span class="favtag">★ Host Favorite</span>
           <h4>Cinnamon Bread Factory</h4>
           <div class="meta">Bakery · Takeout · Sevierville</div>
@@ -633,7 +632,6 @@
       <div class="cards">
 
         <div class="card">
-          <img class="thumb" src="images/old-mill.jpg" width="960" height="640" alt="The Old Mill Restaurant" loading="lazy">
           <h4>The Old Mill Restaurant</h4>
           <div class="meta">Southern · 3.5 mi</div>
           <p class="desc">Hearty made-from-scratch meals beside a working 200-year-old grist mill. Famous for cinnamon-raisin French toast and stone-ground grits.</p>
@@ -646,7 +644,6 @@
         </div>
 
         <div class="card">
-          <img class="thumb" src="images/mamas-farmhouse.jpg" width="468" height="261" alt="Mama's Farmhouse" loading="lazy">
           <h4>Mama's Farmhouse</h4>
           <div class="meta">Family-Style · ~3 mi</div>
           <p class="desc">All-you-can-eat, passed-around-the-table Southern cooking. Buttermilk biscuits, fried chicken, and an outdoor play area for the kids.</p>
@@ -659,7 +656,6 @@
         </div>
 
         <div class="card">
-          <img class="thumb" src="images/sunliner-diner.jpg" width="600" height="450" alt="Sunliner Diner" loading="lazy">
           <h4>Sunliner Diner</h4>
           <div class="meta">Retro Diner · ~3 mi</div>
           <p class="desc">'50s-themed diner with convertible-booth seating, all-day breakfast, chicken &amp; waffles, milkshakes, and classic burgers.</p>
@@ -677,7 +673,6 @@
       <div class="cards">
 
         <div class="card">
-          <img class="thumb" src="images/bennetts-bbq.jpg" width="1000" height="667" alt="Bennett's Pit Bar-B-Que" loading="lazy">
           <h4>Bennett's Pit Bar-B-Que</h4>
           <div class="meta">BBQ · ~3 mi</div>
           <p class="desc">Locally owned 30+ years. Hickory-smoked ribs, pulled pork, and brisket basted in house sauce — plus an all-you-can-eat breakfast bar.</p>
@@ -690,7 +685,6 @@
         </div>
 
         <div class="card">
-          <img class="thumb" src="images/local-goat.jpg" width="1200" height="1200" alt="Local Goat" loading="lazy">
           <h4>Local Goat</h4>
           <div class="meta">New American · ~3 mi</div>
           <p class="desc">Scratch kitchen with fresh, locally sourced plates, craft burgers, and a big bar. A step up for a nicer night out on the Parkway.</p>
@@ -703,7 +697,6 @@
         </div>
 
         <div class="card">
-          <img class="thumb" src="images/pucketts.jpg" width="686" height="386" alt="Puckett's" loading="lazy">
           <h4>Puckett's</h4>
           <div class="meta">Southern &amp; BBQ · ~3.5 mi</div>
           <p class="desc">A beloved Tennessee institution serving cherry-wood-smoked BBQ, fried chicken, pimento cheese bites, scratch-made sides, and famous cobblers — with live music on weekend nights.</p>
