@@ -345,7 +345,7 @@
     <div class="section-head">
       <div class="eyebrow" style="color:var(--gold-lt)">Reserve</div>
       <h2>Book Your Stay</h2>
-      <p>Book direct and save — or send us a request and we'll confirm your dates personally. Returning guest? Skip the fees and book with us next time.</p>
+      <p>Book direct and save — check your dates, see your live total, and book securely online. Returning guest? Skip the fees and book with us next time.</p>
     </div>
     <!-- OwnerRez live availability calendar -->
     <div class="availcal">
@@ -361,20 +361,21 @@
         <div class="ota">
           <a href="https://www.airbnb.com/rooms/1553958627700606401" target="_blank" rel="noopener">View our Airbnb listing <span class="arrow">→</span></a>
         </div>
-        <p style="color:#cfe0d3;font-size:.9rem;margin-top:18px">Check-in after 4:00 PM · Checkout by 11:00 AM · Sleeps up to 5.<br>Prefer to talk first? Use the form and we'll get right back to you with availability and our best direct rate.</p>
+        <p style="color:#cfe0d3;font-size:.9rem;margin-top:18px">Check-in after 4:00 PM · Checkout by 11:00 AM · Sleeps up to 5.<br>Prefer to talk first? You can still send an inquiry before booking.</p>
       </div>
-      <!-- OwnerRez Booking/Inquiry widget.
-           Currently set to "Inquiry Only" in OwnerRez.
-           After the Airbnb cutover, flip it to "Book Now/Inquiry" in
-           OwnerRez > Settings > Widgets — this embed code does NOT change. -->
+      <!-- OwnerRez Booking/Inquiry widget — STAGING ONLY (smoky-nest-v2).
+           This branch embeds a separate OwnerRez widget, "The Smoky Nest - Direct Booking",
+           which is set to "Book Now/Inquiry" mode so guests can complete a reservation online.
+           Production (main) still embeds the "Inquiry Only" widget
+           43f5eccf122849b59fb277c549af6bb7 and must NOT be changed until Josh approves. -->
       <div class="bookwidget">
-        <h3>Request to Book</h3>
-        <p class="bookwidget-sub">Send your dates and we'll come back with a quote, usually within a few hours. No payment to enquire.</p>
+        <h3>Book Direct</h3>
+        <p class="bookwidget-sub">Select your dates to see live pricing and complete your reservation securely through OwnerRez.</p>
         <div class="ownerrez-widget"
              data-propertyId="f87d11eb68e84d6a9baf7f0e645abb42"
              data-widget-type="Booking/Inquiry"
-             data-widgetId="43f5eccf122849b59fb277c549af6bb7"></div>
-        <div class="note">Goes straight into our booking system, so nothing gets lost in an inbox.</div>
+             data-widgetId="47c8ab1e607940e8a2ffebc2ff79f0c0"></div>
+        <div class="note">Your reservation is handled securely through OwnerRez.</div>
       </div>
     </div>
   </div>
@@ -990,7 +991,7 @@
 
       <p class="note">Prefer email? Write to us at
         <a href="mailto:stay@thesmokynest.com">stay@thesmokynest.com</a>.
-        To check dates or request a booking, use the calendar above.</p>
+        To check dates or book your stay, use the calendar and booking section above.</p>
     </div>
   </div>
 </section>
