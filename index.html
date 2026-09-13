@@ -113,7 +113,7 @@
   .book .section-head h2{color:#fff}
   .book .section-head p{color:#cfe0d3}
   .book-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}
-  @media(max-width:780px){.book-grid{grid-template-columns:1fr}}
+  @media(max-width:780px){.book-grid{grid-template-columns:1fr}.book-grid .bookwidget{order:-1}}
   .availcal{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:26px 24px 22px;
     margin:0 0 36px;border-top:4px solid var(--gold)}
   .availcal .availcal-eyebrow{color:var(--gold-deep);font-weight:700;letter-spacing:2px;text-transform:uppercase;
@@ -351,7 +351,7 @@
     <div class="availcal">
       <p class="availcal-eyebrow">Live Availability</p>
       <h3>Check Your Dates</h3>
-      <p class="availcal-sub">Grayed-out dates are already booked. Use the arrows to look further ahead.</p>
+      <p class="availcal-sub">Grayed-out dates are already booked. Use the arrows to look further ahead, then select your dates in the Book Direct panel below to see live pricing.</p>
       <div class="ownerrez-widget" data-propertyId="f87d11eb68e84d6a9baf7f0e645abb42" data-widget-type="Multiple Month Calendar" data-widgetId="770d3259916e433bbbd556e38f4fd631"></div>
     </div>
 
