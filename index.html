@@ -199,6 +199,10 @@
   footer{background:var(--green-dk);color:#cfe0d3;text-align:center;padding:40px 20px;font-size:.9rem}
   footer a{color:var(--gold-lt)}
   footer .brand{display:inline-block;margin-bottom:8px}
+  footer .social{display:flex;justify-content:center;gap:12px;margin:14px 0 4px}
+  footer .social a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(224,164,88,.45);color:var(--gold-lt);transition:background .2s,color .2s,border-color .2s}
+  footer .social a:hover{background:var(--gold-lt);border-color:var(--gold-lt);color:var(--green-dk)}
+  footer .social svg{width:20px;height:20px}
   .disc{font-size:.78rem;color:#b3c4b9;max-width:680px;margin:14px auto 0;line-height:1.5}
 
   /* ---- Accessibility (WCAG AA) ---- */
@@ -1001,6 +1005,10 @@
 <footer>
   <a href="#top" class="brand" style="font-size:1.3rem;color:#fff">The Smoky <span style="color:var(--gold-lt)">Nest</span></a>
   <p>Pigeon Forge, Tennessee &nbsp;·&nbsp; <a href="#contact">Contact</a> &nbsp;·&nbsp; <a href="#book">Book Direct</a></p>
+  <div class="social">
+    <a href="https://www.facebook.com/thesmokynest/" target="_blank" rel="noopener noreferrer" aria-label="Visit The Smoky Nest on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/thesmokynest/" target="_blank" rel="noopener noreferrer" aria-label="Follow The Smoky Nest on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+  </div>
   <p class="disc">Prices and hours are approximate and change seasonally — please confirm on each attraction's official website before you go. The Smoky Nest is an independent rental and is not affiliated with the attractions listed in this guide. The Smoky Nest is an independent host and is not affiliated with, endorsed by, or sponsored by Airbnb, Inc. Airbnb, Superhost and Guest Favorite are trademarks of Airbnb, Inc.</p>
   <p class="credit" style="margin-top:14px;font-size:.8rem;opacity:.75">Site by <a href="https://butterfieldweb.com" target="_blank" rel="noopener">Butterfield Web Co.</a></p>
 </footer>
