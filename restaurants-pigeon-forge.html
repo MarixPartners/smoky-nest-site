@@ -329,5 +329,16 @@
   </div>
   <p class="disc">Prices and hours are approximate and change seasonally — please confirm on each attraction's official website before you go. The Smoky Nest is an independent rental and is not affiliated with the attractions listed in this guide.</p>
 </footer>
+<script>
+  function toggleNav(btn){
+    var open=document.getElementById('nl').classList.toggle('open');
+    btn.setAttribute('aria-expanded', open?'true':'false');
+  }
+  function closeNav(){
+    document.getElementById('nl').classList.remove('open');
+    var b=document.querySelector('.menubtn');
+    if(b) b.setAttribute('aria-expanded','false');
+  }
+</script>
 </body>
 </html>
